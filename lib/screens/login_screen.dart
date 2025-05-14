@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               // Email label
               Align(
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 child: Text(
                   'Email',
                   style: GoogleFonts.manrope(
@@ -93,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               // Password label
               Align(
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 child: Text(
                   'Password',
                   style: GoogleFonts.manrope(

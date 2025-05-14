@@ -1,3 +1,4 @@
+import 'package:fl_vitatraz_app/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -22,7 +23,7 @@ class WelcomeScreen extends StatelessWidget {
             children: [
               // Logo / imagen central
               Image.asset(
-                'assets/images/logo.png',
+                'assets/logo.png',
                 width: size.width * 0.6,
                 fit: BoxFit.contain,
               ),
@@ -33,7 +34,9 @@ class WelcomeScreen extends StatelessWidget {
                 height: 40,
                 child: OutlinedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/login');
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const LoginScreen()),
+                    );
                   },
                   style: OutlinedButton.styleFrom(
                     side: const BorderSide(color: AppColors.secondaryBackground),
