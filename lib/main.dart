@@ -1,6 +1,6 @@
-import 'package:fl_vitatraz_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:fl_vitatraz_app/theme/theme.dart';
+import 'package:fl_vitatraz_app/theme/app_theme.dart';
+import 'package:fl_vitatraz_app/screens/screens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'Health App',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      home: const HomeScreen(),
+      initialRoute: WelcomeScreen.routeName,
+      routes: {
+        WelcomeScreen.routeName: (_) => const WelcomeScreen()
+      },
     );
   }
 }
