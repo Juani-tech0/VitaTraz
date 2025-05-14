@@ -35,7 +35,7 @@ class WelcomeScreen extends StatelessWidget {
                 child: OutlinedButton(
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const LoginScreen()),
+                      MaterialPageRoute(builder: (_) => const HomeScreen()),
                     );
                   },
                   style: OutlinedButton.styleFrom(
