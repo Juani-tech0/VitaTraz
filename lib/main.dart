@@ -1,9 +1,13 @@
+// lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:fl_vitatraz_app/theme/app_theme.dart';
-import 'package:fl_vitatraz_app/screens/screens.dart';
+import 'package:fl_vitatraz_app/screens/login_screen.dart';
+import 'package:fl_vitatraz_app/screens/home_screen.dart';
+import 'package:fl_vitatraz_app/screens/welcome_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-void main() async{
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -22,7 +26,10 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       initialRoute: WelcomeScreen.routeName,
       routes: {
-        WelcomeScreen.routeName: (_) => const WelcomeScreen()
+        WelcomeScreen.routeName: (_) => const WelcomeScreen(),
+        LoginScreen.routeName:   (_) => const LoginScreen(),
+        HomeScreen.routeName:    (_) => const HomeScreen(),
+        '/forgotPassword':       (_) => const WelcomeScreen(), // provisional
       },
     );
   }

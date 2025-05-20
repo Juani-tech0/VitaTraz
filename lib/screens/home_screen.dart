@@ -4,6 +4,7 @@ import 'package:fl_vitatraz_app/theme/theme.dart';
 import 'package:fl_vitatraz_app/components/components.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String routeName = '/home';
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
