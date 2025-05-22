@@ -1,10 +1,8 @@
-// lib/screens/welcome_screen.dart
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fl_vitatraz_app/theme/theme.dart';
-import 'package:fl_vitatraz_app/screens/login_screen.dart';
-import 'package:fl_vitatraz_app/screens/home_screen.dart';
+import 'package:fl_vitatraz_app/screens/screens.dart';
 
 class WelcomeScreen extends StatelessWidget {
   static const String routeName = '/welcome';

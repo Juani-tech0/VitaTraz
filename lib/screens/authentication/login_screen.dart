@@ -1,13 +1,9 @@
-// lib/screens/login_screen.dart
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:fl_vitatraz_app/theme/theme.dart';
-import 'home_screen.dart';
-import 'welcome_screen.dart';
-
-
+import 'package:fl_vitatraz_app/screens/screens.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String routeName = '/login';

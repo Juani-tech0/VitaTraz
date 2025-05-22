@@ -17,34 +17,37 @@ class WidgetCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        height: 120,
-        decoration: BoxDecoration(
-          color: AppColors.secondaryBackground,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: 32, color: AppColors.primary),
-            const SizedBox(height: 8),
-            Text(
-              title,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            if (subtitle.isNotEmpty) ...[
-              const SizedBox(height: 4),
+    // Envolvemos en Material+InkWell para que el onTap funcione y veas ripple
+    return Material(
+      color: AppColors.secondaryBackground,
+      borderRadius: BorderRadius.circular(16),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(16),
+        child: Container(
+          height: 120,
+          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, size: 32, color: AppColors.primary),
+              const SizedBox(height: 8),
               Text(
-                subtitle,
-                style: Theme.of(context).textTheme.titleSmall,
+                title,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
+              if (subtitle.isNotEmpty) ...[
+                const SizedBox(height: 4),
+                Text(
+                  subtitle,
+                  style: Theme.of(context).textTheme.titleSmall,
+                ),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );
   }
 }
+
